@@ -1,0 +1,25 @@
+{
+  "name": "udpdumper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "test -f build/Release/medooze-media-server.node || (node-gyp configure && node-gyp rebuild --jobs=max)",
+    "configure": "node-gyp configure",
+    "swig": "swig -javascript -node -c++ src/udpdumper.i",
+    "build": "node-gyp build --jobs=max"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medooze/udpdumper.git"
+  },
+  "author": "Sergio Garcia Murillo @ Medooze",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/medooze/udpdumper/issues"
+  },
+  "homepage": "medooze/udpdumper#readme",
+  "dependencies": {
+    "nan": "^2.11.1"
+  }
+}
